@@ -1,11 +1,23 @@
+# errorist 0.0.2
+
+## Bugfixes
+
+- Imported the `search_google` function from `searcher` to satisfy `R CMD check`.
+
+## Test Infrastructure
+
+- Enable the use of two cores to speed up Travis-CI builds.
+
 # errorist 0.0.1
+
+## Features
 
 - Created shims for warning and error handling
 - Automatically load and unload shims alongside package calls.
-- Added coverage tests to verify the present of the handlers and for 
+- Added coverage tests to verify the presence of the handlers and for 
   checking the contents of the error handler.
 
-# Special Thanks
+## Special Thanks
 
 This package exists in large part due to conversations or assistance from
 the following folks:

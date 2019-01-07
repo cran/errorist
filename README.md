@@ -26,10 +26,20 @@ the second they arise.
 
 ## Installation
 
-The `errorist` package is only available on GitHub for the moment. You
-can install the `errorist` package with:
+The `errorist` package is available on both CRAN and GitHub. The CRAN
+version is considered stable while the GitHub version is in a state of
+development and may break. You can install the stable version of the
+`errorist` package with:
 
 ``` r
+install.packages("errorist")
+```
+
+For the development version, you can opt for:
+
+``` r
+install.packages("devtools")
+
 devtools::install_github("coatless/errorist")
 ```
 
@@ -65,8 +75,8 @@ search handlers as an option in your `.Rprofile`:
 # Add custom options
 .First <- function() {
   options(
-    errorist.warning = searcher::google,
-    errorist.error = searcher::google
+    errorist.warning = searcher::search_google,
+    errorist.error = searcher::search_google
   )
 }
 
