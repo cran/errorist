@@ -1,6 +1,13 @@
+# errorist 0.0.3
+
+## Bug Fix
+
+- Address an erroneous unit test that was comparing functions within namespaces
+  instead of environments.
+
 # errorist 0.0.2
 
-## Bugfixes
+## Fixes
 
 - Imported the `search_google` function from `searcher` to satisfy `R CMD check`.
 
