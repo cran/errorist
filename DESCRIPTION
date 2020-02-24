@@ -1,6 +1,6 @@
 Package: errorist
 Title: Automatically Search Errors or Warnings
-Version: 0.0.3
+Version: 0.1.0
 Authors@R: c(
              person("James", "Balamuta", 
                     email = "balamut2@illinois.edu", 
@@ -21,9 +21,9 @@ LazyData: true
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2020-02-06 14:09:33 UTC; ronin
+Packaged: 2020-02-24 02:25:41 UTC; ronin
 Author: James Balamuta [aut, cre, cph]
     (<https://orcid.org/0000-0003-2826-8458>)
 Maintainer: James Balamuta <balamut2@illinois.edu>
 Repository: CRAN
-Date/Publication: 2020-02-06 14:30:03 UTC
+Date/Publication: 2020-02-24 05:30:02 UTC
