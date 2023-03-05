@@ -1,6 +1,6 @@
 Package: errorist
 Title: Automatically Search Errors or Warnings
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
              person("James", "Balamuta", 
                     email = "balamut2@illinois.edu", 
@@ -17,13 +17,12 @@ Imports: searcher (>= 0.0.2)
 Suggests: testthat, covr, knitr, rmarkdown
 License: GPL (>= 2)
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2020-02-24 02:25:41 UTC; ronin
+Packaged: 2023-03-05 20:19:25 UTC; ronin
 Author: James Balamuta [aut, cre, cph]
     (<https://orcid.org/0000-0003-2826-8458>)
 Maintainer: James Balamuta <balamut2@illinois.edu>
 Repository: CRAN
-Date/Publication: 2020-02-24 05:30:02 UTC
+Date/Publication: 2023-03-05 20:40:02 UTC
