@@ -12,7 +12,7 @@
 
 <meta name="author" content="James Joseph Balamuta" />
 
-<meta name="date" content="2023-03-05" />
+<meta name="date" content="2023-11-13" />
 
 <title>Workflow while using the errorist package</title>
 
@@ -51,7 +51,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -341,7 +341,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h1 class="title toc-ignore">Workflow while using the errorist
 package</h1>
 <h4 class="author">James Joseph Balamuta</h4>
-<h4 class="date">2023-03-05</h4>
+<h4 class="date">2023-11-13</h4>
 
 
 
@@ -358,19 +358,19 @@ package, which automatically searches the contents on <a href="https://www.googl
 <div id="usage" class="section level2">
 <h2>Usage</h2>
 <p>To use <code>errorist</code> in a causal manner, please type:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(errorist)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warnings and errors will automatically trigger a web search.</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(errorist)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co">#&gt; Warnings and errors will automatically trigger a web search.</span></span></code></pre></div>
 <p>To remove the <code>errorist</code> handlers, please either call the
 <code>disable_errorist()</code> function or detach the package.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(<span class="st">&quot;package:errorist&quot;</span>, <span class="at">unload =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warnings and errors are no longer automatically searched.</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">detach</span>(<span class="st">&quot;package:errorist&quot;</span>, <span class="at">unload =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; Warnings and errors are no longer automatically searched.</span></span></code></pre></div>
 </div>
 <div id="error-search" class="section level2">
 <h2>Error Search</h2>
 <p>During development, many issues can arise. With <code>errorist</code>
 enabled, each error is automatically searched. For instance, if we typed
 a function that wasn’t defined, we’d get:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">f</span>()</span></code></pre></div>
 <pre><code>#&gt; Error in f() : could not find function &quot;f&quot;
 #&gt; Searching query in a web browser ...</code></pre>
 </div>
@@ -383,12 +383,12 @@ warnings that build up during an estimation routine. If
 <code>errorist</code> is enabled, each unique warning will automatically
 be searched within its own tab in the browser. As an example, consider
 the following function:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>many_warnings <span class="ot">=</span> <span class="cf">function</span>() {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;First warning&quot;</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;Second warning&quot;</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;Random warning&quot;</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;Random warning&quot;</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>many_warnings <span class="ot">=</span> <span class="cf">function</span>() {</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;First warning&quot;</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;Second warning&quot;</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;Random warning&quot;</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">&quot;Random warning&quot;</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>}</span></code></pre></div>
 <p>When run, the <code>many_warnings()</code> function will issue
 exactly <strong>four warnings</strong>. However, only three of these
 warnings are unique. Thus, there will be exactly <strong>three</strong>

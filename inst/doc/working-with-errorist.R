@@ -10,11 +10,11 @@ library(errorist)
 ## -----------------------------------------------------------------------------
 detach("package:errorist", unload = TRUE)
 
-## ---- echo = FALSE------------------------------------------------------------
+## ----echo = FALSE-------------------------------------------------------------
 message('Error in f() : could not find function "f"')
 message('Searching query in a web browser ... ')
 
-## ---- echo = FALSE------------------------------------------------------------
+## ----echo = FALSE-------------------------------------------------------------
 message("Warning messages:")
 message("1: In many_warnings() : First warning")
 message("2: In many_warnings() : Second warning")
